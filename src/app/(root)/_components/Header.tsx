@@ -5,7 +5,7 @@ import { useUser } from '@clerk/nextjs';
 import { useQuery } from 'convex/react';
 import Link from 'next/link';
 import { Blocks, Code2, Sparkles } from 'lucide-react';
-import { SignedIn } from '@clerk/clerk-react';
+import { SignedIn, SignInButton } from '@clerk/clerk-react';
 import ThemeSelector from './ThemeSelector';
 import LanguageSelector from './LanguageSelector';
 import RunButton from './RunButton';
@@ -20,7 +20,12 @@ function Header() {
         userId: user?.id || "",
     });
 
-    if (!isSignedIn) return <div>Please sign in</div>;
+    if (!isSignedIn) return (
+        <div>
+            Please sign in -- 
+            <SignInButton/>
+        </div>
+    );
 
     // console.log({convexUser});
     
