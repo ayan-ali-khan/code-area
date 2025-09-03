@@ -1,4 +1,3 @@
-import { SignedIn, SignedOut, SignOutButton, SignUpButton } from '@clerk/nextjs'
 import React from 'react'
 import Header from './_components/Header'
 import EditorPanel from './_components/EditorPanel'

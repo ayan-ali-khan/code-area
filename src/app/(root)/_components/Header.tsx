@@ -10,6 +10,7 @@ import ThemeSelector from './ThemeSelector';
 import LanguageSelector from './LanguageSelector';
 import RunButton from './RunButton';
 import HeaderProfileBtn from './HeaderProfileBtn';
+import NavigationHeader from '@/components/NavigationHeader';
 
 function Header() {
     const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!)
@@ -22,8 +23,7 @@ function Header() {
 
     if (!isSignedIn) return (
         <div>
-            Please sign in -- 
-            <SignInButton/>
+            <NavigationHeader />
         </div>
     );
 
